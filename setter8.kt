@@ -1,27 +1,41 @@
-class Employee(
-var name:String,
-salary:Int
+class Product(
+  var name:String,
+  price:Int,
+  discount:Double
+
 ){
-  var newSalary:Int=salary
+  var newPrice:Int=price
   set(value){
     if(value<0){
-      println("Invalid Salary")
+      println("Invalid Price")
     }
     else if(value==0){
-      println("Salary can't be zero")
-    }
-    else if(value>=1 && value<=10000){
-      println("Salary too low")
+      println("Price can't be zero")
     }
     else{
       field=value
-      println("Salary Updated")
+      println("Price Updated")
+    }
+  }
+  var newDiscount:Double=discount
+  set(value){
+    if(value<0){
+      println("Invalid Discount")
+    }
+    else if(value>50){
+      println("Discount too high")
+    }
+    else{
+      field=value
+      println("Discount updated")
     }
   }
 
 }
 fun main(){
-  var p=Employee(name="Zihan",salary=1000000)
-  p.newSalary=5000000
-  println(p.newSalary)
+  val p=Product(name="Chair",price=100,discount=15.5)
+  p.newPrice=500
+  println(p.newPrice)
+  p.newDiscount=24.0
+  println(p.newDiscount)
 }
