@@ -4,8 +4,11 @@ object BankAccount{
     balance+=amount
   }
   fun withdraw(amount:Int){
-    if(amount>balance){
+    if(amount<=0){
       println("Invalid amount")
+    }
+    else if(amount>balance){
+      println("Insufficient Balance")
     }else{
     balance-=amount
     }
