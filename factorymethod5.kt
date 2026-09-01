@@ -1,18 +1,19 @@
-class BankAccount private constructor(
-var accountNumber:String,
-var balance:Double
+class User private constructor(
+var username:String,
+var age:Int
 ){
   companion object{
-    fun createAccount(accountNumber:String,balance:Double):BankAccount?{
-      if (balance<0){
-        return null
-      }
-      return BankAccount(accountNumber,balance)
+    fun createUser(username:String,age:Int):User?{
+if(username.length<3 || age<18){
+  return null
+}
+return User(username,age)
     }
   }
+  
 }
 fun main(){
-  val bankAccount=BankAccount.createAccount("1234A",27000.0)
-  println(bankAccount?.accountNumber)
-  println(bankAccount?.balance)
+  val user=User.createUser("Zihan",29)
+  println(user?.username)
+  println(user?.age)
 }
