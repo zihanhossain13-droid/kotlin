@@ -1,9 +1,7 @@
-fun <T>printTwoValues(a:T,b:T){
-  println(a)
-  println(b)
+fun <T> getValue(value:T):T{
+  return value
 }
 fun main(){
-  printTwoValues(10,20)
-  printTwoValues("Zihan","Hossain")
-  printTwoValues(10.3,10.77)
+  val value=getValue(100)
+  println(value)
 }
