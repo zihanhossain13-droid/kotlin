@@ -8,7 +8,7 @@ class pairBox<K,V>(
 
 }
 fun main(){
-  val pair=pairBox("name","Zihan")
+  val pair=pairBox("age",25)
   pair.show()
   
 }
