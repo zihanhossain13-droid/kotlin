@@ -1,4 +1,4 @@
-fun List<Int>.positiveDoubles():List<Int?>{
+fun List<Int>.positiveDoubles():List<Int>{
   return this.filter{it>0}.map{it*2}
 }
 fun main(){
