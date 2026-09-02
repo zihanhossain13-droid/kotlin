@@ -1,7 +1,7 @@
 fun main(){
   val age=15
   try{
-    if(age<15){
+    if(age<18){
       throw Exception("Age must be 18+")
     }
     println("Welcome")
