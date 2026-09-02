@@ -6,6 +6,9 @@ data.add(value)
   fun count():Int{
     return data.size
   }
+  fun clear(){
+    return data.clear()
+  }
   
   
 }
@@ -14,6 +17,8 @@ fun main(){
   data.save(100)
   data.save(200)
   data.save(300)
+  println(data.count())
+  data.clear()
   println(data.count())
 
 }
