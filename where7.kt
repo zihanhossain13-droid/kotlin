@@ -1,9 +1,9 @@
 fun <T>findMax(a:T,b:T):T
 where T:Number,T:Comparable<T>{
   return if(a.compareTo(b)>0){
-    return a
+     a
   }else{
-    return b
+     b
   }
 }
 fun main(){
