@@ -1,4 +1,4 @@
 fun main(){
-  val checkAge:(Int)->String={if(it>=18) "Adult" else "Minor"}
-  println(checkAge(40))
+  val calculateSum:(Int,Int)->Int={a,b->a+b}
+  println(calculateSum(10,20))
 }
