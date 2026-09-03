@@ -1,7 +1,7 @@
-fun square(a:Int,operation:(Int)->Int):Int{
-  return operation(a)
+fun subtract(a:Int,b:Int,operation:(Int,Int)->Int):Int{
+  return operation(a,b)
 }
 fun main(){
-  val result=square(5){it*it}
+  val result=subtract(20,8){a,b->a-b}
   println(result)
 }
