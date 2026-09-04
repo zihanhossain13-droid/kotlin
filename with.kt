@@ -10,6 +10,6 @@ fun printUser(user: User) {
     }
 }
 fun main(){
-  val result=printUser(User("Zihan",24))
+  printUser(User("Zihan",24))
   
 }
