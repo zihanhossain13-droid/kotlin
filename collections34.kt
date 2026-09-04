@@ -1,8 +1,8 @@
-fun getFirstNumber(numbers: List<Int>): Int? {
-    return numbers.firstOrNull()
+fun getLastNumber(numbers: List<Int>): Int? {
+    return numbers.lastOrNull()
 }
 fun main(){
     val numbers = emptyList<Int>()
-    val result=getFirstNumber(numbers)
+    val result=getLastNumber(numbers)
     println(result)
 }
