@@ -2,14 +2,13 @@ import kotlinx.coroutines.*
 fun main(){
     val scope=CoroutineScope(Dispatchers.Default)
     scope.launch{
-        println("Task1")
-        withContext(Dispatchers.IO){
-        delay(500)
-        println("IO Task")
+        println("Starting")
+        val result=withContext(Dispatchers.IO){
+            delay(500)
+            50*4
+            
         }
-        println("Task2")
-        
-    
+        println(result)
     }
     Thread.sleep(1000)
     
