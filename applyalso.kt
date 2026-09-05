@@ -11,8 +11,6 @@ fun processUser(user: User): User {
     println(it.name)
     println(it.age)
   }
-    
-    return user
 }
 fun main(){
   var output=processUser(User("",0))
