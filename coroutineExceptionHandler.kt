@@ -1,11 +1,16 @@
 import kotlinx.coroutines.*
-fun main()=runBlocking{
-    val handler=CoroutineExceptionHandler{
-        _,exception->
-        println("Error:${exception.message}")
+
+fun main() = runBlocking {
+
+    val handler = CoroutineExceptionHandler { _, exception ->
+        println("Error: ${exception.message}")
     }
-    val job=launch(handler){
-        throw Exception("Something want wrong.")
+
+    val scope = CoroutineScope(SupervisorJob() + handler)
+
+    val job = scope.launch {
+        throw Exception("Something went wrong.")
     }
+
     job.join()
 }
