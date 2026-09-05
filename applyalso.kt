@@ -7,8 +7,7 @@ fun processUser(user: User): User {
   return user.apply{
     name="Zihan"
     age=25
-  }
-  return user.also{
+  }.also{
     println(it.name)
     println(it.age)
   }
