@@ -2,12 +2,11 @@ import kotlinx.coroutines.*
 fun main(){
     val scope=CoroutineScope(Dispatchers.Default)
     scope.launch{
-        val result=withContext(Dispatchers.IO){
+       val result= withContext(Dispatchers.IO){
             delay(500)
-            "Data Loaded"
+            "Zihan".uppercase()
         }
-        println(result)
-       
+       println(result)
     }
-    Thread.sleep(1000)
+    Thread.sleep(2000)
 }
